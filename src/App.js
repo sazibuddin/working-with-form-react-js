@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Inputs from './components/input/index.jsx'
+import UnControlledForm from './components/uncontrolled_form/index'
+import ControlledForm from './components/controlled_form/index.jsx'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <div className="row">
+          <div className="col-md-8 offset-md-2">
+              <div className="card">
+                <div className="card-header">
+                  <h5 className="text-center">Working with form</h5>
+                </div>
+                <div className="card-body">
+                    {/* <Inputs /> */}
+                    <ControlledForm />
+                </div>
+              </div>
+          </div>
+        </div>
     </div>
   );
-}
+};
 
 export default App;
